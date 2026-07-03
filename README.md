@@ -1,6 +1,6 @@
 # Vera AI Challenge Bot
 
-Deployed at: https://vera-ai-challenge-hg10.onrender.com/
+Deployed at: 
 
 ---
 
