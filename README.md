@@ -30,7 +30,7 @@ If the LLM is down or rate-limited, the bot still responds — just with a templ
 
 ---
 
-# Problem Statement
+## Problem Statement
 
 Local businesses receive large amounts of performance, customer, and category data.
 
@@ -46,7 +46,7 @@ Vera's job is to turn that raw data into something actionable and send it direct
 
 ---
 
-# System Architecture
+## System Architecture
 
 ## AI First
 
@@ -80,7 +80,7 @@ The bot never returns empty actions.
 
 ---
 
-# Context Framework
+## Context Framework
 
 All contexts are held in memory:
 
@@ -146,7 +146,7 @@ Stores actionable events that activate message generation:
 
 ---
 
-# Version-Controlled Context Updates
+## Version-Controlled Context Updates
 
 Each context update includes a version number:
 
@@ -168,7 +168,7 @@ If the incoming version is older than what's already stored, it gets rejected:
 
 ---
 
-# Trigger Resolution
+## Trigger Resolution
 
 When `/v1/tick` is called, the bot resolves the trigger → merchant mapping in this order:
 
@@ -181,7 +181,7 @@ This means the bot handles both `{"merchant_id": "m_001"}` and `{"available_trig
 
 ---
 
-# Message Generation Pipeline
+## Message Generation Pipeline
 
 ```
 1. Judge fires /v1/tick with trigger IDs or merchant ID
@@ -205,7 +205,7 @@ This means the bot handles both `{"merchant_id": "m_001"}` and `{"available_trig
 
 ---
 
-# Prompt Engineering
+## Prompt Engineering
 
 The prompt tells the model to:
 
@@ -227,7 +227,7 @@ Priority order when multiple signals are present:
 
 ---
 
-# Conversation Management
+## Conversation Management
 
 Conversation state lives in memory:
 
@@ -239,7 +239,7 @@ Tracked per `conversation_id`. Enables multi-turn flows without re-sending conte
 
 ---
 
-# Reply Handling
+## Reply Handling
 
 When a merchant replies, the message goes through:
 
@@ -261,7 +261,7 @@ Actions returned:
 
 ---
 
-# Challenge Endpoints
+## Challenge Endpoints
 
 ## GET /v1/healthz
 
@@ -342,7 +342,7 @@ vera-ai-challenge-main/
 
 ---
 
-# Run Locally
+## Run Locally
 
 Clone and install:
 
@@ -381,7 +381,7 @@ python tests/test_bot.py
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 | Layer | Tech |
 | :--- | :--- |
@@ -394,7 +394,7 @@ python tests/test_bot.py
 
 ---
 
-# Author
+## Author
 
 Huzaifa Mulla
 
